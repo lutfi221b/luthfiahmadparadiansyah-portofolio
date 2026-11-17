@@ -1,315 +1,1037 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luthfi Ahmad Paradiansyah | Cybersecurity Specialist</title>
-    
-    <!-- Fonts: Inter (BinanceNova fallback) & JetBrains Mono (BinancePlex fallback) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#fcd535',
-                        'primary-active': '#f0b90b',
-                        'primary-disabled': '#3a3a1f',
-                        ink: '#181a20',
-                        body: '#eaecef',
-                        'body-on-light': '#181a20',
-                        muted: '#707a8a',
-                        'muted-strong': '#929aa5',
-                        'hairline-on-light': '#eaecef',
-                        'hairline-on-dark': '#2b3139',
-                        'border-strong': '#cdd1d6',
-                        'canvas-light': '#ffffff',
-                        'canvas-dark': '#0b0e11',
-                        'surface-card-dark': '#1e2329',
-                        'surface-elevated-dark': '#2b3139',
-                        'surface-soft-light': '#fafafa',
-                        'on-primary': '#181a20',
-                        'on-dark': '#ffffff',
-                        'trading-up': '#0ecb81',
-                        'trading-down': '#f6465d',
-                        info: '#3b82f6',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Editorial / Display
-                        mono: ['JetBrains Mono', 'monospace'], // Numerical / Technical
-                    },
-                    spacing: {
-                        'section': '80px',
-                    },
-                    borderRadius: {
-                        'xs': '2px',
-                        'sm': '4px',
-                        'md': '6px',
-                        'lg': '8px',
-                        'xl': '12px',
-                        'pill': '9999px',
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUTHFI.SEC — Luthfi Ahmad Paradiansyah | Exploit Dev & Digital Ventures</title>
+
+  <!-- Google Fonts: Inter (BinanceNova substitute) & JetBrains Mono (BinancePlex tabular substitute) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Configuration mapped directly to DESIGN-BINANCE.md tokens -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            binance: {
+              primary: '#fcd535',
+              primaryActive: '#f0b90b',
+              primaryDisabled: '#3a3a1f',
+              ink: '#181a20',
+              bodyDark: '#eaecef',
+              bodyLight: '#181a20',
+              muted: '#707a8a',
+              mutedStrong: '#929aa5',
+              hairlineLight: '#eaecef',
+              hairlineDark: '#2b3139',
+              borderStrong: '#cdd1d6',
+              canvasLight: '#ffffff',
+              canvasDark: '#0b0e11',
+              surfaceDark: '#1e2329',
+              surfaceElevatedDark: '#2b3139',
+              surfaceSoftLight: '#fafafa',
+              surfaceStrongLight: '#f5f5f5',
+              tradingUp: '#0ecb81',
+              tradingDown: '#f6465d',
+              turquoise: '#2dbdb6',
+              info: '#3b82f6'
             }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'IBM Plex Sans', 'monospace']
+          },
+          borderRadius: {
+            'xs': '2px',
+            'sm': '4px',
+            'md': '6px',
+            'lg': '8px',
+            'xl': '12px',
+            'pill': '9999px'
+          },
+          spacing: {
+            'section': '80px'
+          }
         }
-    </script>
-    <style>
-        body {
-            background-color: #0b0e11;
-            color: #eaecef;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        /* Hide scrollbar for clean aesthetic */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0b0e11;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2b3139;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #707a8a;
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Binance Design System utilities & tabular enforcement */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-tabular {
+      font-family: 'JetBrains Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Focus ring strictly matching DESIGN-BINANCE.md */
+    .bn-focus:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Primary Yellow CTA Button */
+    .btn-bn-primary {
+      background-color: #fcd535;
+      color: #181a20;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1;
+      transition: background-color 0.15s ease, transform 0.1s ease;
+    }
+    .btn-bn-primary:hover {
+      background-color: #f0b90b;
+    }
+    .btn-bn-primary:active {
+      background-color: #e0aa07;
+      transform: scale(0.99);
+    }
+
+    /* Hide scrollbar for horizontal market table scroll on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </head>
-<body class="bg-canvas-dark text-body selection:bg-primary selection:text-ink">
+<body class="bg-binance-canvasLight text-binance-ink dark:bg-binance-canvasDark dark:text-binance-bodyDark transition-colors duration-200">
 
-    <!-- Top Navigation (top-nav-dark) -->
-    <nav class="h-[64px] bg-canvas-dark border-b border-hairline-on-dark flex items-center justify-between px-6 sticky top-0 z-50">
-        <div class="flex items-center gap-8">
-            <a href="#" class="text-primary font-bold text-xl tracking-tight">LUTHFI.A.P</a>
-            <div class="hidden md:flex gap-6">
-                <a href="#about" class="text-on-dark font-medium text-[14px] hover:text-primary transition-colors">Tentang</a>
-                <a href="#experience" class="text-on-dark font-medium text-[14px] hover:text-primary transition-colors">Pengalaman</a>
-                <a href="#projects" class="text-on-dark font-medium text-[14px] hover:text-primary transition-colors">Proyek</a>
-                <a href="#certifications" class="text-on-dark font-medium text-[14px] hover:text-primary transition-colors">Sertifikasi</a>
-            </div>
-        </div>
-        <div class="flex items-center gap-4">
-            <a href="mailto:lutfiahmadparadiansyah@gmail.com" class="hidden md:inline-block text-body hover:text-primary font-semibold text-[14px] transition-colors">Hubungi Saya</a>
-            <a href="#projects" class="bg-primary hover:bg-primary-active text-on-primary font-semibold text-[14px] px-6 py-[12px] rounded-md h-[40px] flex items-center transition-colors">Lihat Portofolio</a>
-        </div>
-    </nav>
+  <!-- ===================================================================== -->
+  <!-- 1. TOP NAVIGATION (64px height, top-nav-dark / top-nav-light)         -->
+  <!-- ===================================================================== -->
+  <header class="sticky top-0 z-40 h-16 w-full bg-binance-canvasLight/95 dark:bg-binance-canvasDark/95 backdrop-blur border-b border-binance-hairlineLight dark:border-binance-hairlineDark transition-colors duration-200">
+    <div class="max-w-[1280px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- Left: Brand Wordmark & Primary Nav -->
+      <div class="flex items-center gap-8">
+        <!-- Clean Typography Wordmark (No Logo) -->
+        <a href="#overview" class="flex items-center group focus:outline-none">
+          <span class="font-bold text-lg tracking-tight text-binance-primary">
+            LUTHFI<span class="text-binance-ink dark:text-white">.SEC</span>
+          </span>
+        </a>
 
-    <!-- Hero Section (hero-band-dark) -->
-    <header class="bg-canvas-dark pt-section pb-16 px-6 border-b border-hairline-on-dark">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Desktop Navigation Links (14px / 500) -->
+        <nav class="hidden md:flex items-center gap-6 text-[14px] font-medium">
+          <a href="#overview" class="text-binance-ink dark:text-white hover:text-binance-primary dark:hover:text-binance-primary transition-colors">Overview</a>
+          <a href="#ventures" class="text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary dark:hover:text-binance-primary transition-colors">Ventures & Projects</a>
+          <a href="#exploit-security" class="text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary dark:hover:text-binance-primary transition-colors">Exploit & Security</a>
+          <a href="#certificates" class="text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary dark:hover:text-binance-primary transition-colors">Certificates</a>
+          <a href="#activities" class="text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary dark:hover:text-binance-primary transition-colors">Activities</a>
+          <a href="#faq" class="text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary dark:hover:text-binance-primary transition-colors">FAQ</a>
+        </nav>
+      </div>
+
+      <!-- Right Cluster: Theme Toggle, Quick Link, Primary Yellow CTA -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- External Link to Kalanirvata -->
+        <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1.5 text-[13px] font-medium text-binance-muted hover:text-binance-primary transition-colors">
+          <span>kalanirvata.my.id</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button id="themeToggle" type="button" aria-label="Toggle Dark atau Light Mode" class="p-2 rounded-md border border-binance-hairlineLight dark:border-binance-hairlineDark bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark text-binance-ink dark:text-white hover:border-binance-primary transition-colors bn-focus">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg id="iconSun" class="w-4 h-4 hidden dark:block text-binance-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg id="iconMoon" class="w-4 h-4 block dark:hidden text-binance-ink" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Primary Yellow CTA (button-primary: 40px height, 6px radius, #FCD535) -->
+        <button type="button" onclick="openInquiryModal('General Collaboration')" class="btn-bn-primary h-10 px-4 sm:px-5 rounded-md inline-flex items-center justify-center gap-2 cursor-pointer">
+          <span>Hire / Collaborate</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" type="button" aria-label="Buka Menu Navigasi" class="md:hidden p-2 rounded-md text-binance-ink dark:text-white hover:bg-binance-surfaceStrongLight dark:hover:bg-binance-surfaceDark">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Full-Sheet Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden bg-binance-canvasLight dark:bg-binance-canvasDark border-b border-binance-hairlineLight dark:border-binance-hairlineDark px-4 pt-3 pb-6 space-y-3">
+      <a href="#overview" onclick="closeMobileMenu()" class="block py-2 text-[15px] font-medium text-binance-ink dark:text-white hover:text-binance-primary">Overview</a>
+      <a href="#ventures" onclick="closeMobileMenu()" class="block py-2 text-[15px] font-medium text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary">Ventures & Projects</a>
+      <a href="#exploit-security" onclick="closeMobileMenu()" class="block py-2 text-[15px] font-medium text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary">Exploit & Security</a>
+      <a href="#certificates" onclick="closeMobileMenu()" class="block py-2 text-[15px] font-medium text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary">Certificates</a>
+      <a href="#activities" onclick="closeMobileMenu()" class="block py-2 text-[15px] font-medium text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary">Activities</a>
+      <a href="#faq" onclick="closeMobileMenu()" class="block py-2 text-[15px] font-medium text-binance-ink dark:text-binance-bodyDark hover:text-binance-primary">FAQ</a>
+      <div class="pt-3 border-t border-binance-hairlineLight dark:border-binance-hairlineDark flex flex-col gap-2">
+        <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-md text-center text-sm font-semibold bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark text-binance-ink dark:text-white border border-binance-hairlineLight dark:border-binance-hairlineDark">
+          Kunjungi kalanirvata.my.id ↗
+        </a>
+        <button type="button" onclick="closeMobileMenu(); openInquiryModal('General Collaboration')" class="btn-bn-primary w-full py-3 rounded-pill text-center">
+          Hire / Collaborate
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- 5. CERTIFICATIONS & CREDENTIALS (cert1.png, cert2.png, cert3.png)     -->
+  <!-- ===================================================================== -->
+  <section id="certificates" class="py-16 md:py-20 border-b border-binance-hairlineLight dark:border-binance-hairlineDark">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div>
+          <span class="font-tabular text-xs font-semibold uppercase tracking-wider text-binance-primary">VERIFIED CREDENTIALS</span>
+          <h2 class="text-[32px] sm:text-[40px] font-semibold leading-[1.15] tracking-[-0.3px] text-binance-ink dark:text-white mt-1">
+            Certificates &amp; Achievements
+          </h2>
+        </div>
+        <p class="text-[14px] text-binance-muted max-w-md">
+          Dokumentasi sertifikasi kompetensi keamanan siber, rekayasa sistem, dan pencapaian profesional. Klik kartu untuk memperbesar.
+        </p>
+      </div>
+
+      <!-- 3-Column Certificate Grid (feature-photo-card: #1e2329 dark, #ffffff light, rounded-xl, hairline) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Certificate 1 -->
+        <div onclick="openCertModal('cert1.png', 'Certificate 01 — Cybersecurity & Technical Credential')" role="button" tabindex="0" class="group bg-binance-canvasLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl overflow-hidden hover:border-binance-primary transition-colors cursor-pointer flex flex-col">
+          <div class="aspect-[4/3] w-full bg-binance-surfaceSoftLight dark:bg-binance-canvasDark border-b border-binance-hairlineLight dark:border-binance-hairlineDark overflow-hidden relative">
+            <img 
+              src="cert1.png" 
+              alt="Certificate 1 - Luthfi Ahmad Paradiansyah" 
+              onerror="this.onerror=null; this.src='https://placehold.co/800x600/1e2329/fcd535?text=cert1.png';"
+              class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
+            />
+          </div>
+          <div class="p-5 flex items-center justify-between gap-3">
             <div>
-                <img src="profil.jpeg" alt="Luthfi Ahmad Paradiansyah" class="w-24 h-24 rounded-full mb-6 border-2 border-hairline-on-dark object-cover bg-surface-card-dark">
-                <h1 class="text-on-dark font-bold text-[48px] md:text-[64px] leading-[1.1] tracking-[-1px] mb-4">
-                    Mengamankan <br>Aset Digital.
-                </h1>
-                <p class="text-[20px] font-semibold text-body mb-8 max-w-xl leading-[1.35]">
-                    Luthfi Ahmad Paradiansyah <br>
-                    <span class="text-primary">Mahasiswa PNC | Cybersecurity Specialist | Exploit Dev | Web Dev & SEO</span>
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="bg-primary hover:bg-primary-active text-on-primary font-semibold text-[14px] px-8 py-[14px] rounded-pill flex items-center transition-colors">
-                        Jelajahi Proyek
-                    </a>
-                    <a href="#about" class="bg-surface-card-dark hover:bg-surface-elevated-dark text-on-dark font-semibold text-[14px] px-6 py-[12px] rounded-md flex items-center transition-colors">
-                        Pelajari Lebih Lanjut
-                    </a>
-                </div>
+              <div class="font-tabular text-[11px] font-semibold text-binance-primary uppercase">CREDENTIAL #01</div>
+              <h3 class="text-[16px] font-semibold text-binance-ink dark:text-white mt-0.5">Cybersecurity &amp; Operations</h3>
+              <p class="font-tabular text-xs text-binance-muted mt-0.5">cert1.png</p>
             </div>
-            
-            <!-- Stat Callout Cards (stat-callout-card using BinancePlex/Mono) -->
-            <div class="grid grid-cols-2 gap-6">
-                <div class="bg-surface-card-dark p-6 rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors">
-                    <div class="text-primary font-mono font-bold text-[40px] leading-[1.1] tracking-[-0.3px]">80+</div>
-                    <div class="text-body text-[14px] mt-2 font-medium">Vulnerabilities Found</div>
-                </div>
-                <div class="bg-surface-card-dark p-6 rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors">
-                    <div class="text-primary font-mono font-bold text-[40px] leading-[1.1] tracking-[-0.3px]">5+</div>
-                    <div class="text-body text-[14px] mt-2 font-medium">Tahun Pengalaman</div>
-                </div>
-                <div class="bg-surface-card-dark p-6 rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors">
-                    <div class="text-primary font-mono font-bold text-[40px] leading-[1.1] tracking-[-0.3px]">12</div>
-                    <div class="text-body text-[14px] mt-2 font-medium">Proyek Skala Enterprise</div>
-                </div>
-                <div class="bg-surface-card-dark p-6 rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors">
-                    <div class="text-primary font-mono font-bold text-[40px] leading-[1.1] tracking-[-0.3px]">0</div>
-                    <div class="text-trading-up text-[14px] mt-2 font-medium flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        Insiden Terlewatkan
-                    </div>
-                </div>
-            </div>
+            <span class="px-2.5 py-1 rounded-sm bg-binance-tradingUp/10 text-binance-tradingUp font-tabular text-xs font-semibold shrink-0">
+              VERIFIED
+            </span>
+          </div>
         </div>
-    </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-section px-6 border-b border-hairline-on-dark bg-canvas-dark">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-on-dark font-bold text-[32px] md:text-[40px] leading-[1.15] tracking-[-0.3px] mb-12">Tentang Saya</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="space-y-6 text-[14px] md:text-[16px] text-body leading-[1.5]">
-                    <p>
-                        Saya adalah seorang <span class="text-on-dark font-semibold">Mahasiswa Politeknik Negeri Cilacap (PNC)</span> sekaligus spesialis keamanan siber yang berfokus pada <span class="text-on-dark font-semibold">Penetration Testing, Exploit Development, dan Bug Hunting</span>. Menggabungkan intuisi analitis dengan kemampuan teknis mendalam untuk menemukan kerentanan sebelum pihak yang tidak bertanggung jawab melakukannya.
-                    </p>
-                    <p>
-                        Selain keamanan siber, saya memiliki keahlian khusus di bidang <span class="text-on-dark font-semibold">Web Development dan SEO</span>. Saya membangun arsitektur web yang tidak hanya kokoh dan aman dari serangan, tetapi juga teroptimasi penuh untuk visibilitas mesin pencari guna memaksimalkan jangkauan digital.
-                    </p>
-                    <p>
-                        Keahlian saya mencakup <span class="text-on-dark font-semibold">Digital & Cloud Forensics</span>, di mana saya menerapkan metodologi deduksi digital yang ketat untuk merespons insiden, melacak jejak intrusi, dan merekonstruksi serangan di lingkungan cloud yang kompleks.
-                    </p>
-                    <p>
-                        Saya adalah pendukung kuat dari <span class="text-on-dark font-semibold">Terminal-First Workflow</span>. Bagi saya, command line bukan sekadar alat, melainkan perpanjangan dari pemikiran analitis saya, memungkinkan eksekusi dan otomatisasi yang jauh lebih cepat dan presisi dalam setiap operasi keamanan.
-                    </p>
-                </div>
-                <div class="bg-surface-card-dark rounded-xl p-8 border border-hairline-on-dark">
-                    <h3 class="text-on-dark font-semibold text-[20px] mb-6">Technical Arsenal</h3>
-                    <div class="space-y-4 font-mono text-[14px]">
-                        <div class="flex justify-between items-center pb-3 border-b border-hairline-on-dark">
-                            <span class="text-muted-strong">Languages</span>
-                            <span class="text-on-dark text-right">Rust, Python, C, Bash, Go</span>
-                        </div>
-                        <div class="flex justify-between items-center pb-3 border-b border-hairline-on-dark">
-                            <span class="text-muted-strong">Offensive</span>
-                            <span class="text-on-dark text-right">Metasploit, Burp Suite, Nuclei, Dalfox</span>
-                        </div>
-                        <div class="flex justify-between items-center pb-3 border-b border-hairline-on-dark">
-                            <span class="text-muted-strong">Forensics</span>
-                            <span class="text-on-dark text-right">Volatility, Autopsy, AWS/GCP Logs</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-muted-strong">Environments</span>
-                            <span class="text-on-dark text-right">Arch Linux, Kali, Docker, AWS</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Certificate 2 -->
+        <div onclick="openCertModal('cert2.png', 'Certificate 02 — Offensive Security & Exploit Research')" role="button" tabindex="0" class="group bg-binance-canvasLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl overflow-hidden hover:border-binance-primary transition-colors cursor-pointer flex flex-col">
+          <div class="aspect-[4/3] w-full bg-binance-surfaceSoftLight dark:bg-binance-canvasDark border-b border-binance-hairlineLight dark:border-binance-hairlineDark overflow-hidden relative">
+            <img 
+              src="cert2.png" 
+              alt="Certificate 2 - Luthfi Ahmad Paradiansyah" 
+              onerror="this.onerror=null; this.src='https://placehold.co/800x600/1e2329/fcd535?text=cert2.png';"
+              class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
+            />
+          </div>
+          <div class="p-5 flex items-center justify-between gap-3">
+            <div>
+              <div class="font-tabular text-[11px] font-semibold text-binance-primary uppercase">CREDENTIAL #02</div>
+              <h3 class="text-[16px] font-semibold text-binance-ink dark:text-white mt-0.5">Security Engineering &amp; VAPT</h3>
+              <p class="font-tabular text-xs text-binance-muted mt-0.5">cert2.png</p>
             </div>
+            <span class="px-2.5 py-1 rounded-sm bg-binance-tradingUp/10 text-binance-tradingUp font-tabular text-xs font-semibold shrink-0">
+              VERIFIED
+            </span>
+          </div>
         </div>
-    </section>
 
-    <!-- Experience & Projects (markets-table-card style) -->
-    <section id="experience" class="py-section px-6 bg-canvas-dark">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-on-dark font-bold text-[32px] md:text-[40px] leading-[1.15] tracking-[-0.3px] mb-12">Pengalaman & Operasi</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-surface-card-dark rounded-xl p-6 md:p-8 hover:bg-surface-elevated-dark transition-colors duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-on-dark font-semibold text-[20px] leading-[1.35]">LinuxHackingID</h3>
-                        <span class="bg-primary text-on-primary font-mono text-[12px] font-bold px-3 py-1 rounded-sm">CURRENT</span>
-                    </div>
-                    <p class="text-primary font-medium text-[14px] mb-4">Management, Pentesting & Cybersecurity Courses</p>
-                    <p class="text-body text-[14px] leading-[1.5] mb-6">
-                        Mengelola infrastruktur keamanan dan memimpin tim dalam melakukan penetrasi jaringan dan aplikasi. Saya juga aktif merancang silabus dan menjadi instruktur untuk berbagai kursus serta pelatihan keamanan siber komprehensif bagi komunitas dan profesional.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">PenTesting</span>
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">Instructor</span>
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">Team Lead</span>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-surface-card-dark rounded-xl p-6 md:p-8 hover:bg-surface-elevated-dark transition-colors duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-on-dark font-semibold text-[20px] leading-[1.35]">Forendigi</h3>
-                        <span class="bg-surface-elevated-dark text-on-dark border border-hairline-on-dark font-mono text-[12px] font-bold px-3 py-1 rounded-sm">FOUNDER</span>
-                    </div>
-                    <p class="text-primary font-medium text-[14px] mb-4">CEO & Founder, Startup Forensik Digital</p>
-                    <p class="text-body text-[14px] leading-[1.5] mb-6">
-                        Membangun perusahaan rintisan yang berfokus pada investigasi insiden siber, forensik digital, dan pemulihan data pasca-serangan ransomware untuk klien korporat.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">Digital Forensics</span>
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">Incident Response</span>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-surface-card-dark rounded-xl p-6 md:p-8 hover:bg-surface-elevated-dark transition-colors duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-on-dark font-semibold text-[20px] leading-[1.35]">Kalanirvata AI Agency</h3>
-                        <span class="bg-surface-elevated-dark text-on-dark border border-hairline-on-dark font-mono text-[12px] font-bold px-3 py-1 rounded-sm">PROJECT</span>
-                    </div>
-                    <p class="text-primary font-medium text-[14px] mb-4">Otomatisasi Keamanan Berbasis AI</p>
-                    <p class="text-body text-[14px] leading-[1.5] mb-6">
-                        Mengintegrasikan model kecerdasan buatan untuk analisis log anomali dan otomatisasi deteksi ancaman (Threat Hunting) guna mempercepat respons terhadap Zero-day exploits.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">AI/ML</span>
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">Automation</span>
-                    </div>
-                </div>
-
-                <!-- Card 5 (Featured Project) -->
-                <div id="projects" class="md:col-span-2 bg-surface-card-dark rounded-xl p-6 md:p-8 border border-primary relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-on-dark font-semibold text-[20px] leading-[1.35]">reNgine Pentesting Automation</h3>
-                        <span class="text-primary font-mono text-[12px] font-bold flex items-center gap-1">
-                            BSSN PROJECT
-                        </span>
-                    </div>
-                    <p class="text-primary font-medium text-[14px] mb-4">Otomatisasi Reconnaissance & Vulnerability Scanning</p>
-                    <p class="text-body text-[14px] leading-[1.5] mb-6">
-                        Merancang dan mengimplementasikan pipeline otomatisasi penetration testing menggunakan framework reNgine. Proyek ini diintegrasikan dengan standar operasional keamanan untuk meningkatkan efisiensi penemuan kerentanan dan pengelolaan aset secara proaktif pada infrastruktur skala besar.
-                    </p>
-                    <div class="flex gap-2 mb-6">
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">reNgine</span>
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">Automation</span>
-                        <span class="text-muted text-[12px] font-mono border border-hairline-on-dark px-2 py-1 rounded">SecOps</span>
-                    </div>
-                    <a href="#" class="inline-flex items-center text-primary font-semibold text-[14px] hover:text-primary-active transition-colors">
-                        Lihat Detail Operasi 
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </a>
-                </div>
+        <!-- Certificate 3 -->
+        <div onclick="openCertModal('cert3.png', 'Certificate 03 — Systems & Digital Venture Certification')" role="button" tabindex="0" class="group bg-binance-canvasLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl overflow-hidden hover:border-binance-primary transition-colors cursor-pointer flex flex-col">
+          <div class="aspect-[4/3] w-full bg-binance-surfaceSoftLight dark:bg-binance-canvasDark border-b border-binance-hairlineLight dark:border-binance-hairlineDark overflow-hidden relative">
+            <img 
+              src="cert3.png" 
+              alt="Certificate 3 - Luthfi Ahmad Paradiansyah" 
+              onerror="this.onerror=null; this.src='https://placehold.co/800x600/1e2329/fcd535?text=cert3.png';"
+              class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-200"
+            />
+          </div>
+          <div class="p-5 flex items-center justify-between gap-3">
+            <div>
+              <div class="font-tabular text-[11px] font-semibold text-binance-primary uppercase">CREDENTIAL #03</div>
+              <h3 class="text-[16px] font-semibold text-binance-ink dark:text-white mt-0.5">Technical &amp; Infrastructure</h3>
+              <p class="font-tabular text-xs text-binance-muted mt-0.5">cert3.png</p>
             </div>
+            <span class="px-2.5 py-1 rounded-sm bg-binance-tradingUp/10 text-binance-tradingUp font-tabular text-xs font-semibold shrink-0">
+              VERIFIED
+            </span>
+          </div>
         </div>
-    </section>
 
-    <!-- Certification Gallery -->
-    <section id="certifications" class="py-section px-6 bg-canvas-dark border-t border-hairline-on-dark">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-on-dark font-bold text-[32px] md:text-[40px] leading-[1.15] tracking-[-0.3px]">Sertifikasi & Lisensi</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Cert 1 -->
-                <div class="bg-surface-card-dark rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors overflow-hidden group">
-                    <div class="h-40 bg-surface-elevated-dark relative">
-                        <!-- Ganti src dengan file sertifikat Anda -->
-                        <img src="cert1.png" alt="Sertifikat 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/2b3139/eaecef?text=Sertifikat+1'">
-                        <div class="absolute inset-0 bg-canvas-dark/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Cert 2 -->
-                <div class="bg-surface-card-dark rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors overflow-hidden group">
-                    <div class="h-40 bg-surface-elevated-dark relative">
-                        <!-- Ganti src dengan file sertifikat Anda -->
-                        <img src="cert2.png" alt="Sertifikat 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/2b3139/eaecef?text=Sertifikat+2'">
-                        <div class="absolute inset-0 bg-canvas-dark/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                </div>
+  <!-- ===================================================================== -->
+  <!-- 6. MULTI-DISCIPLINARY ACTIVITIES & TRACK RECORD (Binance Table Grid)  -->
+  <!-- ===================================================================== -->
+  <section id="activities" class="py-16 md:py-20 border-b border-binance-hairlineLight dark:border-binance-hairlineDark">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10">
+        <span class="font-tabular text-xs font-semibold uppercase tracking-wider text-binance-primary">EXECUTION LOG &amp; CAPABILITIES</span>
+        <h2 class="text-[32px] sm:text-[40px] font-semibold leading-[1.15] tracking-[-0.3px] text-binance-ink dark:text-white mt-1">
+          Multi-Disciplinary Activities
+        </h2>
+        <p class="text-[14px] text-binance-muted mt-2 max-w-2xl">
+          Aktivitas harian saya mencakup spektrum luas—dari eksploitasi teknis tingkat rendah, administrasi infrastruktur server, hingga perancangan model bisnis digital.
+        </p>
+      </div>
 
-                <!-- Cert 3 -->
-                <div class="bg-surface-card-dark rounded-xl border border-transparent hover:border-hairline-on-dark transition-colors overflow-hidden group">
-                    <div class="h-40 bg-surface-elevated-dark relative">
-                        <!-- Ganti src dengan file sertifikat Anda -->
-                        <img src="cert3.png" alt="Sertifikat 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://placehold.co/600x400/2b3139/eaecef?text=Sertifikat+3'">
-                        <div class="absolute inset-0 bg-canvas-dark/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
-                </div>
-            </div>
+      <!-- Dense Binance-style Data Table Card -->
+      <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-binance-hairlineLight dark:border-binance-hairlineDark text-[12px] font-medium text-binance-muted">
+                <th class="py-4 px-6">Domain / Aktivitas</th>
+                <th class="py-4 px-6">Fokus Teknis &amp; Eksekusi</th>
+                <th class="py-4 px-6">Stack / Metodologi</th>
+                <th class="py-4 px-6 text-right">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-binance-hairlineLight dark:divide-binance-hairlineDark text-[14px]">
+              
+              <!-- Row 1 -->
+              <tr class="hover:bg-binance-canvasLight dark:hover:bg-binance-surfaceElevatedDark/50 transition-colors">
+                <td class="py-4 px-6">
+                  <div class="font-semibold text-binance-ink dark:text-white">Offensive Security &amp; Exploit Dev</div>
+                  <div class="text-xs text-binance-muted mt-0.5">Core Specialization</div>
+                </td>
+                <td class="py-4 px-6 text-[13px] text-binance-mutedStrong dark:text-binance-bodyDark">
+                  Riset kerentanan aplikasi &amp; sistem, pengembangan exploit PoC, bug hunting, dan reconnaissance otomatis.
+                </td>
+                <td class="py-4 px-6 font-tabular text-xs text-binance-ink dark:text-binance-bodyDark">
+                  Rust • Python • C/C++ • Burp Suite • Nuclei
+                </td>
+                <td class="py-4 px-6 text-right font-tabular text-xs font-semibold text-binance-tradingUp">
+                  ACTIVE R&amp;D
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr class="hover:bg-binance-canvasLight dark:hover:bg-binance-surfaceElevatedDark/50 transition-colors">
+                <td class="py-4 px-6">
+                  <div class="font-semibold text-binance-ink dark:text-white">Venture Building &amp; Freelance</div>
+                  <div class="text-xs text-binance-muted mt-0.5">Kalanirvata &amp; Client Projects</div>
+                </td>
+                <td class="py-4 px-6 text-[13px] text-binance-mutedStrong dark:text-binance-bodyDark">
+                  Membangun agensi otomasi AI, menangani proyek pengembangan sistem untuk klien, dan eksperimen produk digital.
+                </td>
+                <td class="py-4 px-6 font-tabular text-xs text-binance-ink dark:text-binance-bodyDark">
+                  OpenClaw • AI Agents • Next.js • MCP
+                </td>
+                <td class="py-4 px-6 text-right font-tabular text-xs font-semibold text-binance-primary">
+                  OPERATING
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr class="hover:bg-binance-canvasLight dark:hover:bg-binance-surfaceElevatedDark/50 transition-colors">
+                <td class="py-4 px-6">
+                  <div class="font-semibold text-binance-ink dark:text-white">Industrial Security Internship</div>
+                  <div class="text-xs text-binance-muted mt-0.5">PT Teknologi Server Indonesia (X-CODE)</div>
+                </td>
+                <td class="py-4 px-6 text-[13px] text-binance-mutedStrong dark:text-binance-bodyDark">
+                  Praktik lapangan 5 bulan dalam pengujian keamanan server, VAPT, mitigasi insiden, dan manajemen infrastruktur.
+                </td>
+                <td class="py-4 px-6 font-tabular text-xs text-binance-ink dark:text-binance-bodyDark">
+                  Linux Hardening • VAPT • Network Sec
+                </td>
+                <td class="py-4 px-6 text-right font-tabular text-xs font-semibold text-binance-tradingUp">
+                  COMPLETED
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr class="hover:bg-binance-canvasLight dark:hover:bg-binance-surfaceElevatedDark/50 transition-colors">
+                <td class="py-4 px-6">
+                  <div class="font-semibold text-binance-ink dark:text-white">System Tinkering &amp; Self-Hosting</div>
+                  <div class="text-xs text-binance-muted mt-0.5">Infrastructure &amp; Hardware Lab</div>
+                </td>
+                <td class="py-4 px-6 text-[13px] text-binance-mutedStrong dark:text-binance-bodyDark">
+                  Konfigurasi server mandiri, kontainerisasi layanan keamanan, serta eksperimen perangkat lunak &amp; perangkat keras.
+                </td>
+                <td class="py-4 px-6 font-tabular text-xs text-binance-ink dark:text-binance-bodyDark">
+                  Docker • Linux • PHP • PostgreSQL
+                </td>
+                <td class="py-4 px-6 text-right font-tabular text-xs font-semibold text-binance-mutedStrong">
+                  CONTINUOUS
+                </td>
+              </tr>
+
+              <!-- Row 5 -->
+              <tr class="hover:bg-binance-canvasLight dark:hover:bg-binance-surfaceElevatedDark/50 transition-colors">
+                <td class="py-4 px-6">
+                  <div class="font-semibold text-binance-ink dark:text-white">Technical Writing &amp; Deduction</div>
+                  <div class="text-xs text-binance-muted mt-0.5">Forendigi &amp; Edukasi Komunitas</div>
+                </td>
+                <td class="py-4 px-6 text-[13px] text-binance-mutedStrong dark:text-binance-bodyDark">
+                  Menulis artikel forensik digital di Forendigi, menyusun materi edukasi di LinuxHackingID, dan riset analisis deduktif.
+                </td>
+                <td class="py-4 px-6 font-tabular text-xs text-binance-ink dark:text-binance-bodyDark">
+                  Digital Forensics • OSINT • Curriculum
+                </td>
+                <td class="py-4 px-6 text-right font-tabular text-xs font-semibold text-binance-mutedStrong">
+                  PUBLISHED
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer (footer-light on dark canvas - visually closes the page) -->
-    <footer class="bg-surface-soft-light py-[64px] px-6 text-body-on-light border-t border-border-strong">
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. FAQ ACCORDION (faq-row with hairline dividers)                     -->
+  <!-- ===================================================================== -->
+  <section id="faq" class="py-16 md:py-20">
+    <div class="max-w-[960px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-[32px] sm:text-[40px] font-semibold leading-[1.15] tracking-[-0.3px] text-binance-ink dark:text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-[14px] text-binance-muted mt-2">
+          Informasi ringkas seputar fokus riset keamanan siber, proyek bisnis, dan cara berkolaborasi.
+        </p>
+      </div>
+
+      <div class="divide-y divide-binance-hairlineLight dark:divide-binance-hairlineDark border-t border-b border-binance-hairlineLight dark:border-binance-hairlineDark" id="faqContainer">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item py-5">
+          <button type="button" class="faq-toggle w-full flex items-center justify-between text-left gap-4 cursor-pointer focus:outline-none">
+            <span class="text-[16px] font-semibold text-binance-ink dark:text-white hover:text-binance-primary transition-colors">
+              1. Apa fokus utama Luthfi Ahmad Paradiansyah di bidang Cybersecurity?
+            </span>
+            <span class="faq-icon w-7 h-7 rounded-full bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark flex items-center justify-center text-binance-muted shrink-0 transition-transform duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </span>
+          </button>
+          <div class="faq-content hidden pt-3 pr-8 text-[14px] leading-[1.6] text-binance-mutedStrong dark:text-binance-bodyDark/90">
+            Fokus utama saya berada pada <strong class="text-binance-ink dark:text-white">Exploit Development</strong> dan offensive security—memahami bagaimana celah kerentanan bekerja di level teknis, membangun Proof-of-Concept (PoC), serta mengembangkan perkakas otomasi keamanan seperti <span class="font-tabular text-binance-primary">Suberust</span> (berbasis Rust) dan <span class="font-tabular text-binance-primary">SiberHub</span> untuk mempercepat proses identifikasi celah keamanan.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item py-5">
+          <button type="button" class="faq-toggle w-full flex items-center justify-between text-left gap-4 cursor-pointer focus:outline-none">
+            <span class="text-[16px] font-semibold text-binance-ink dark:text-white hover:text-binance-primary transition-colors">
+              2. Apa itu Kalanirvata (kalanirvata.my.id) dan layanan apa yang ditawarkan?
+            </span>
+            <span class="faq-icon w-7 h-7 rounded-full bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark flex items-center justify-center text-binance-muted shrink-0 transition-transform duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </span>
+          </button>
+          <div class="faq-content hidden pt-3 pr-8 text-[14px] leading-[1.6] text-binance-mutedStrong dark:text-binance-bodyDark/90">
+            <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="text-binance-primary hover:underline font-medium">Kalanirvata</a> adalah inisiatif bisnis aktif saya yang bergerak sebagai agensi otomasi AI, layanan setup &amp; kustomisasi OpenClaw, serta unit intelijen deduksi digital. Kami membantu bisnis mengintegrasikan agen AI otonom untuk meningkatkan efisiensi operasional dan analisis data.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item py-5">
+          <button type="button" class="faq-toggle w-full flex items-center justify-between text-left gap-4 cursor-pointer focus:outline-none">
+            <span class="text-[16px] font-semibold text-binance-ink dark:text-white hover:text-binance-primary transition-colors">
+              3. Bagaimana status usaha Forendigi saat ini?
+            </span>
+            <span class="faq-icon w-7 h-7 rounded-full bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark flex items-center justify-center text-binance-muted shrink-0 transition-transform duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </span>
+          </button>
+          <div class="faq-content hidden pt-3 pr-8 text-[14px] leading-[1.6] text-binance-mutedStrong dark:text-binance-bodyDark/90">
+            <strong class="text-binance-ink dark:text-white">Forendigi</strong> awalnya dirintis sebagai inisiatif usaha di bidang digital forensics. Setelah evaluasi model bisnis dan arah fokus, operasional bisnis komersialnya dihentikan dan kini bertransformasi menjadi repositori artikel serta publikasi edukatif mengenai forensik digital.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item py-5">
+          <button type="button" class="faq-toggle w-full flex items-center justify-between text-left gap-4 cursor-pointer focus:outline-none">
+            <span class="text-[16px] font-semibold text-binance-ink dark:text-white hover:text-binance-primary transition-colors">
+              4. Apakah Luthfi menerima proyek freelance bisnis atau keamanan siber?
+            </span>
+            <span class="faq-icon w-7 h-7 rounded-full bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark flex items-center justify-center text-binance-muted shrink-0 transition-transform duration-200">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </span>
+          </button>
+          <div class="faq-content hidden pt-3 pr-8 text-[14px] leading-[1.6] text-binance-mutedStrong dark:text-binance-bodyDark/90">
+            Ya. Saya aktif mengerjakan berbagai proyek kolaborasi bisnis dan teknis—mulai dari pengembangan sistem otomasi VAPT, integrasi AI melalui Kalanirvata, pembuatan aplikasi web/backend, hingga konsultasi keamanan siber. Anda dapat menekan tombol <span class="text-binance-primary font-semibold">"Hire / Collaborate"</span> untuk mendiskusikan kebutuhan proyek Anda.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7A. PRE-FOOTER CTA BAND (cta-band-dark: #1e2329, rounded 12px)        -->
+  <!-- ===================================================================== -->
+  <section class="pb-16 md:pb-20">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <h2 class="text-[26px] sm:text-[32px] font-semibold leading-[1.2] text-binance-ink dark:text-white">
+            Build Secure Systems &amp; Scalable Ventures Together
+          </h2>
+          <p class="text-[14px] text-binance-muted mt-2">
+            Diskusikan ide bisnis, otomasi AI, atau pengujian keamanan siber langsung bersama Luthfi Ahmad Paradiansyah.
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <button type="button" onclick="openInquiryModal('Direct Project Inquiry')" class="btn-bn-primary h-11 px-7 rounded-md inline-flex items-center justify-center cursor-pointer">
+            Contact Luthfi
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7B. LIGHT FOOTER (footer-light: #fafafa even on dark page, Binance signature) -->
+  <!-- ===================================================================== -->
+  <footer class="bg-binance-surfaceSoftLight text-binance-bodyLight border-t border-binance-hairlineLight py-16">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-8 pb-12 border-b border-binance-hairlineLight">
+        
+        <!-- Brand Column (2 cols on desktop) -->
+        <div class="col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-6 h-6 text-binance-primary" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 3L21.5 8.5L18.3 11.7L16 9.4L13.7 11.7L10.5 8.5L16 3Z" fill="currentColor"/>
+              <path d="M29 16L23.5 21.5L20.3 18.3L22.6 16L20.3 13.7L23.5 10.5L29 16Z" fill="currentColor"/>
+              <path d="M16 29L10.5 23.5L13.7 20.3L16 22.6L18.3 20.3L21.5 23.5L16 29Z" fill="currentColor"/>
+        <!-- Brand Column (2 cols on desktop, No Logo) -->
+        <div class="col-span-2">
+          <div class="mb-4">
+            <span class="font-bold text-base tracking-tight text-binance-ink">LUTHFI.SEC</span>
+          </div>
+          <p class="text-[13px] text-binance-muted leading-relaxed max-w-xs mb-4">
+            Portofolio resmi <strong class="text-binance-ink">Luthfi Ahmad Paradiansyah</strong>. Exploit Development, Cybersecurity Engineering, dan Digital Venture Builder.
+          </p>
+          <div class="font-tabular text-xs text-binance-muted">
+            Cilacap, Jawa Tengah • Indonesia
+          </div>
+        </div>
+
+        <!-- Column: Ventures -->
+        <div>
+          <h3 class="text-[14px] font-semibold text-binance-ink mb-4">Ventures</h3>
+          <ul class="space-y-2.5 text-[13px] text-binance-muted">
+            <li><a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="hover:text-binance-ink transition-colors">Kalanirvata ↗</a></li>
+            <li><a href="#ventures" class="hover:text-binance-ink transition-colors">Forendigi (Archive)</a></li>
+            <li><a href="#ventures" class="hover:text-binance-ink transition-colors">Freelance Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Security R&D -->
+        <div>
+          <h3 class="text-[14px] font-semibold text-binance-ink mb-4">Security R&amp;D</h3>
+          <ul class="space-y-2.5 text-[13px] text-binance-muted">
+            <li><a href="#exploit-security" class="hover:text-binance-ink transition-colors">Exploit Development</a></li>
+            <li><a href="#exploit-security" class="hover:text-binance-ink transition-colors">Suberust (Rust)</a></li>
+            <li><a href="#exploit-security" class="hover:text-binance-ink transition-colors">SiberHub (MCP)</a></li>
+            <li><a href="#ventures" class="hover:text-binance-ink transition-colors">VAPT Automation</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Navigation -->
+        <div>
+          <h3 class="text-[14px] font-semibold text-binance-ink mb-4">Navigation</h3>
+          <ul class="space-y-2.5 text-[13px] text-binance-muted">
+            <li><a href="#overview" class="hover:text-binance-ink transition-colors">Overview</a></li>
+            <li><a href="#ventures" class="hover:text-binance-ink transition-colors">Ventures &amp; Projects</a></li>
+            <li><a href="#certificates" class="hover:text-binance-ink transition-colors">Certificates</a></li>
+            <li><a href="#activities" class="hover:text-binance-ink transition-colors">Activities</a></li>
+            <li><a href="#faq" class="hover:text-binance-ink transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Column: Connect -->
+        <div>
+          <h3 class="text-[14px] font-semibold text-binance-ink mb-4">Connect</h3>
+          <ul class="space-y-2.5 text-[13px] text-binance-muted">
+            <li><button type="button" onclick="openInquiryModal('Business Inquiry')" class="hover:text-binance-ink transition-colors text-left cursor-pointer">Project Inquiry</button></li>
+            <li><a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="hover:text-binance-ink transition-colors">kalanirvata.my.id</a></li>
+            <li><span class="text-binance-muted">LinuxHackingID Partner</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-binance-muted">
+        <div>
+          &copy; <span id="currentYear">2026</span> Luthfi Ahmad Paradiansyah. Built with Binance Design System tokens.
+        </div>
+        <div class="font-tabular">
+          SYSTEM STATUS: <span class="text-binance-tradingUp font-semibold">OPERATIONAL</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- TRANSACTIONAL LIGHT-MODE MODAL (Contact / Project Inquiry)            -->
+  <!-- Per DESIGN-BINANCE.md: Transactional surfaces flip to Light Mode      -->
+  <!-- (#ffffff canvas, #eaecef hairlines, #FCD535 yellow CTA)               -->
+  <!-- ===================================================================== -->
+  <div id="inquiryModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-xs">
+    <div class="bg-binance-canvasLight text-binance-ink border border-binance-hairlineLight rounded-xl w-full max-w-lg p-6 sm:p-8 relative">
+      
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-binance-hairlineLight">
+        <div>
+          <span class="font-tabular text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-binance-primary text-binance-ink">
+            TRANSACTIONAL INQUIRY
+          </span>
+          <h3 class="text-[22px] font-bold text-binance-ink mt-2">Mulai Kolaborasi / Proyek</h3>
+          <p class="text-[13px] text-binance-muted mt-0.5">Kirim detail kebutuhan bisnis, otomasi AI, atau keamanan siber Anda.</p>
+        </div>
+        <button type="button" onclick="closeInquiryModal()" aria-label="Tutup Modal" class="p-1.5 rounded-md text-binance-muted hover:text-binance-ink hover:bg-binance-surfaceStrongLight transition-colors cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Transactional Form -->
+      <form id="inquiryForm" onsubmit="submitInquiryForm(event)" class="mt-5 space-y-4">
+        <div>
+          <label for="inqName" class="block text-[13px] font-semibold text-binance-ink mb-1.5">Nama / Perusahaan</label>
+          <input id="inqName" type="text" required placeholder="Masukkan nama Anda atau instansi" class="w-full h-10 px-3.5 rounded-md bg-binance-canvasLight border border-binance-hairlineLight text-[14px] text-binance-ink placeholder-binance-muted bn-focus" />
+        </div>
+
+        <div>
+          <label for="inqEmail" class="block text-[13px] font-semibold text-binance-ink mb-1.5">Email atau Kontak (WhatsApp / Telegram)</label>
+          <input id="inqEmail" type="text" required placeholder="nama@domain.com atau @username" class="w-full h-10 px-3.5 rounded-md bg-binance-canvasLight border border-binance-hairlineLight text-[14px] text-binance-ink placeholder-binance-muted bn-focus" />
+        </div>
+
+        <div>
+          <label for="inqCategory" class="block text-[13px] font-semibold text-binance-ink mb-1.5">Kategori Kolaborasi</label>
+          <select id="inqCategory" class="w-full h-10 px-3.5 rounded-md bg-binance-canvasLight border border-binance-hairlineLight text-[14px] text-binance-ink bn-focus">
+            <option value="General Collaboration">Kolaborasi Bisnis &amp; Pengembangan Produk</option>
+            <option value="Kalanirvata AI & Automation">Kalanirvata — AI Automation &amp; OpenClaw Setup</option>
+            <option value="Security Audit / Exploit Research">Cybersecurity — VAPT, Pentest &amp; Exploit Research</option>
+            <option value="Custom Project / Freelance Build">Freelance Web / Security Tool Engineering</option>
+            <option value="Direct Project Inquiry">Diskusi Umum dengan Luthfi</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="inqMessage" class="block text-[13px] font-semibold text-binance-ink mb-1.5">Ringkasan Kebutuhan</label>
+          <textarea id="inqMessage" rows="3" required placeholder="Jelaskan secara singkat ruang lingkup proyek atau kolaborasi yang diinginkan..." class="w-full p-3.5 rounded-md bg-binance-canvasLight border border-binance-hairlineLight text-[14px] text-binance-ink placeholder-binance-muted bn-focus"></textarea>
+        </div>
+
+        <!-- Feedback Alert Box (Replaces alert() per system rules) -->
+        <div id="inquiryFeedback" class="hidden p-3.5 rounded-md bg-binance-surfaceSoftLight border border-binance-hairlineLight text-[13px]"></div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+          <button type="submit" class="btn-bn-primary w-full sm:flex-1 h-11 rounded-md cursor-pointer">
+            Kirim &amp; Salin Ringkasan
+          </button>
+          <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto h-11 px-4 rounded-md border border-binance-hairlineLight text-[13px] font-semibold text-binance-ink hover:bg-binance-surfaceSoftLight inline-flex items-center justify-center">
+            Ke Kalanirvata ↗
+          </a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- FORENDIGI ARCHIVE PREVIEW MODAL (Light-mode informational dialog)    -->
+  <!-- ===================================================================== -->
+  <div id="forendigiModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-xs">
+    <div class="bg-binance-canvasLight text-binance-ink border border-binance-hairlineLight rounded-xl w-full max-w-lg p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-binance-hairlineLight">
+        <div>
+          <span class="font-tabular text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-binance-tradingDown/10 text-binance-tradingDown">
+            VENTURE CASE LOG • ARCHIVED
+          </span>
+          <h3 class="text-[20px] font-bold text-binance-ink mt-2">Arsip Perjalanan Forendigi</h3>
+        </div>
+        <button type="button" onclick="closeArticlePreview()" class="p-1.5 rounded-md text-binance-muted hover:text-binance-ink hover:bg-binance-surfaceStrongLight cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="mt-4 space-y-3 text-[14px] leading-relaxed text-binance-bodyLight">
+        <p>
+          <strong>Forendigi</strong> bermula dari ketertarikan saya pada dunia <em>Digital Forensics</em> dan investigasi insiden siber. Inisiatif ini sempat dirancang sebagai layanan usaha forensik digital.
+        </p>
+        <p>
+          Dalam perkembangannya, saya memutuskan untuk menghentikan operasional komersialnya dan mengalihkan fokus ke lini bisnis yang lebih terukur seperti <strong>Kalanirvata</strong>, sementara Forendigi dipertahankan sebagai kanal publikasi artikel dan catatan edukatif seputar forensik digital.
+        </p>
+        <div class="p-3.5 rounded-lg bg-binance-surfaceSoftLight border border-binance-hairlineLight text-xs text-binance-muted space-y-1.5">
+          <div class="font-semibold text-binance-ink">Topik Artikel Utama di Forendigi:</div>
+          <div>• Dasar Akuisisi &amp; Integritas Bukti Digital (Chain of Custody)</div>
+          <div>• Analisis Artefak Sistem Operasi &amp; Jejak Aktivitas Jaringan</div>
+          <div>• Metodologi Investigasi Deduktif pada Insiden Keamanan</div>
+        </div>
+      </div>
+      <div class="mt-6 flex justify-end">
+        <button type="button" onclick="closeArticlePreview()" class="btn-bn-primary h-10 px-6 rounded-md cursor-pointer">
+          Tutup Arsip
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- CERTIFICATE LIGHTBOX MODAL (Light-mode transactional preview)       -->
+  <!-- ===================================================================== -->
+  <div id="certModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-xs">
+    <div class="bg-binance-canvasLight text-binance-ink border border-binance-hairlineLight rounded-xl w-full max-w-3xl p-5 sm:p-6">
+      <div class="flex items-center justify-between gap-4 pb-3 border-b border-binance-hairlineLight">
+        <div>
+          <span class="font-tabular text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-binance-primary text-binance-ink">
+            CERTIFICATE PREVIEW
+          </span>
+          <h3 id="certModalTitle" class="text-[18px] font-bold text-binance-ink mt-1.5">Certificate Preview</h3>
+        </div>
+        <button type="button" onclick="closeCertModal()" aria-label="Tutup Preview Sertifikat" class="p-1.5 rounded-md text-binance-muted hover:text-binance-ink hover:bg-binance-surfaceStrongLight cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="mt-4 bg-binance-surfaceSoftLight border border-binance-hairlineLight rounded-lg overflow-hidden flex items-center justify-center">
+        <img id="certModalImg" src="" alt="Preview Sertifikat" class="max-h-[70vh] w-auto object-contain" />
+      </div>
+      <div class="mt-4 flex justify-end">
+        <button type="button" onclick="closeCertModal()" class="btn-bn-primary h-10 px-6 rounded-md cursor-pointer">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT LOGIC: Theme Toggle, Market Board Filter, Modals & FAQ     -->
+  <!-- ===================================================================== -->
+  <script>
+    // 1. Ventures & Projects Market Board Data (Binance Markets Table pattern)
+    const venturesData = [
+      {
+        ticker: 'KLN',
+        name: 'Kalanirvata',
+        subtitle: 'kalanirvata.my.id • AI & Deduction',
+        category: 'active',
+        status: 'ACTIVE',
+        metric: '+94.8%',
+        isPositive: true,
+        url: 'https://kalanirvata.my.id',
+        actionType: 'external'
+      },
+      {
+        ticker: 'EXP',
+        name: 'Exploit Dev R&D',
+        subtitle: 'Vulnerability & PoC Research',
+        category: 'security',
+        status: 'CORE',
+        metric: '+88.0%',
+        isPositive: true,
+        url: '#exploit-security',
+        actionType: 'anchor'
+      },
+      {
+        ticker: 'SBH',
+        name: 'SiberHub MCP',
+        subtitle: 'AI-Driven Vuln Management SaaS',
+        category: 'security',
+        status: 'DEV',
+        metric: '+68.2%',
+        isPositive: true,
+        url: '#exploit-security',
+        actionType: 'anchor'
+      },
+      {
+        ticker: 'SBR',
+        name: 'Suberust',
+        subtitle: 'Rust Automated Recon Engine',
+        category: 'security',
+        status: 'TOOL',
+        metric: '+45.0%',
+        isPositive: true,
+        url: '#exploit-security',
+        actionType: 'anchor'
+      },
+      {
+        ticker: 'B2B',
+        name: 'Client & VAPT Builds',
+        subtitle: 'Freelance & LinuxHackingID',
+        category: 'active',
+        status: 'DELIVERED',
+        metric: '+100%',
+        isPositive: true,
+        url: '#ventures',
+        actionType: 'anchor'
+      },
+      {
+        ticker: 'FRD',
+        name: 'Forendigi Media',
+        subtitle: 'Ex-Startup → Forensic Articles',
+        category: 'archive',
+        status: 'ARCHIVE',
+        metric: 'MEDIA',
+        isPositive: false,
+        url: 'forendigi',
+        actionType: 'modal'
+      }
+    ];
+
+    function renderMarketRows(filter = 'all') {
+      const container = document.getElementById('marketRowsContainer');
+      if (!container) return;
+
+      const filtered = filter === 'all'
+        ? venturesData
+        : venturesData.filter(item => item.category === filter);
+
+      container.innerHTML = filtered.map(item => {
+        const badgeColor = item.isPositive
+          ? 'text-binance-tradingUp'
+          : 'text-binance-tradingDown';
+        const arrowSymbol = item.isPositive ? '▲' : '●';
+
+        let clickAttr = '';
+        if (item.actionType === 'external') {
+          clickAttr = `onclick="window.open('${item.url}', '_blank', 'noopener,noreferrer')"`;
+        } else if (item.actionType === 'modal') {
+          clickAttr = `onclick="openArticlePreview()"`;
+        } else {
+          clickAttr = `onclick="document.querySelector('${item.url}').scrollIntoView({behavior: 'smooth'})"`;
+        }
+
+        return `
+          <div ${clickAttr} role="button" tabindex="0" class="grid grid-cols-12 items-center py-3 px-1.5 -mx-1.5 rounded-md hover:bg-binance-canvasLight dark:hover:bg-binance-surfaceElevatedDark/70 transition-colors cursor-pointer group">
+            <div class="col-span-6 flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-full bg-binance-canvasLight dark:bg-binance-canvasDark border border-binance-hairlineLight dark:border-binance-hairlineDark font-tabular text-[11px] font-bold text-binance-primary flex items-center justify-center shrink-0">
+                ${item.ticker}
+              </div>
+              <div class="min-w-0">
+                <div class="text-[14px] font-semibold text-binance-ink dark:text-white group-hover:text-binance-primary transition-colors truncate">
+                  ${item.name}
+                </div>
+                <div class="text-[11px] text-binance-muted truncate">${item.subtitle}</div>
+              </div>
+            </div>
+            <div class="col-span-3 text-right font-tabular text-[12px] font-medium text-binance-ink dark:text-binance-bodyDark">
+              ${item.status}
+            </div>
+            <div class="col-span-3 text-right font-tabular text-[13px] font-semibold ${badgeColor} flex items-center justify-end gap-1">
+              <span class="text-[9px]">${arrowSymbol}</span>
+              <span>${item.metric}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Tab switching logic
+    document.querySelectorAll('.market-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.market-tab').forEach(t => {
+          t.classList.remove('active', 'bg-binance-canvasLight', 'dark:bg-binance-surfaceElevatedDark', 'text-binance-ink', 'dark:text-white', 'font-semibold');
+          t.classList.add('text-binance-muted');
+        });
+        btn.classList.add('active', 'bg-binance-canvasLight', 'dark:bg-binance-surfaceElevatedDark', 'text-binance-ink', 'dark:text-white', 'font-semibold');
+        btn.classList.remove('text-binance-muted');
+        renderMarketRows(btn.dataset.filter);
+      });
+    });
+
+    // 2. Dark / Light Mode Toggle (Defaults to Binance Dark Mode #0b0e11)
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+
+    // Respect saved preference if user toggled previously, otherwise default dark
+    const savedTheme = localStorage.getItem('luthfi-sec-theme');
+    if (savedTheme === 'light') {
+      htmlEl.classList.remove('dark');
+    } else {
+      htmlEl.classList.add('dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      const isDark = htmlEl.classList.contains('dark');
+      localStorage.setItem('luthfi-sec-theme', isDark ? 'dark' : 'light');
+    });
+
+    // 3. Mobile Navigation Drawer
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuDrawer.classList.toggle('hidden');
+    });
+
+    function closeMobileMenu() {
+      mobileMenuDrawer.classList.add('hidden');
+    }
+
+    // 4. Transactional Inquiry Modal & Form Handling
+    const inquiryModal = document.getElementById('inquiryModal');
+    const inqCategorySelect = document.getElementById('inqCategory');
+    const inqMessageInput = document.getElementById('inqMessage');
+    const inqEmailInput = document.getElementById('inqEmail');
+    const inquiryFeedback = document.getElementById('inquiryFeedback');
+
+    function openInquiryModal(category = 'General Collaboration', prefillText = '') {
+      if (inqCategorySelect) {
+        const optionExists = Array.from(inqCategorySelect.options).some(opt => opt.value === category);
+        if (optionExists) {
+          inqCategorySelect.value = category;
+        }
+      }
+      if (prefillText) {
+        if (prefillText.includes('@')) {
+          inqEmailInput.value = prefillText;
+        } else {
+          inqMessageInput.value = `Tertarik berdiskusi mengenai: ${prefillText}`;
+        }
+      }
+      inquiryFeedback.classList.add('hidden');
+      inquiryModal.classList.remove('hidden');
+      inquiryModal.classList.add('flex');
+    }
+
+    function closeInquiryModal() {
+      inquiryModal.classList.add('hidden');
+      inquiryModal.classList.remove('flex');
+    }
+
+    function handleHeroSubmit(event) {
+      event.preventDefault();
+      const inputVal = document.getElementById('heroQuickInput').value.trim();
+      openInquiryModal('General Collaboration', inputVal);
+    }
+
+    function submitInquiryForm(event) {
+      event.preventDefault();
+      const name = document.getElementById('inqName').value.trim();
+      const email = inqEmailInput.value.trim();
+      const category = inqCategorySelect.value;
+      const message = inqMessageInput.value.trim();
+
+      const summary = `[LUTHFI.SEC INQUIRY]\nNama: ${name}\nKontak: ${email}\nKategori: ${category}\nPesan: ${message}`;
+
+      // Copy summary to clipboard using execCommand per iFrame guidelines
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = summary;
+      tempTextArea.style.position = 'fixed';
+      tempTextArea.style.opacity = '0';
+      document.body.appendChild(tempTextArea);
+      tempTextArea.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {
+        console.error('Copy failed', err);
+      }
+      document.body.removeChild(tempTextArea);
+
+      inquiryFeedback.innerHTML = `
+        <div class="font-semibold text-binance-tradingUp mb-1">✓ Ringkasan Inkuiri Berhasil Disalin ke Clipboard!</div>
+        <div class="text-binance-muted">Silakan tempel (Ctrl+V) pesan tersebut saat menghubungi Luthfi melalui email atau kanal <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="text-binance-ink underline font-medium">kalanirvata.my.id</a>.</div>
+      `;
+      inquiryFeedback.classList.remove('hidden');
+    }
+
+    // 5. Forendigi Archive Preview Modal
+    const forendigiModal = document.getElementById('forendigiModal');
+
+    function openArticlePreview() {
+      forendigiModal.classList.remove('hidden');
+      forendigiModal.classList.add('flex');
+    }
+
+    function closeArticlePreview() {
+      forendigiModal.classList.add('hidden');
+      forendigiModal.classList.remove('flex');
+    }
+
+    // 5B. Certificate Lightbox Preview Modal
+    const certModal = document.getElementById('certModal');
+    const certModalImg = document.getElementById('certModalImg');
+    const certModalTitle = document.getElementById('certModalTitle');
+
+    function openCertModal(src, title) {
+      certModalImg.src = src;
+      certModalTitle.textContent = title;
+      certModal.classList.remove('hidden');
+      certModal.classList.add('flex');
+    }
+
+    function closeCertModal() {
+      certModal.classList.add('hidden');
+      certModal.classList.remove('flex');
+    }
+
+    // Close modals when clicking outside backdrop or pressing Escape
+    window.addEventListener('click', (e) => {
+      if (e.target === inquiryModal) closeInquiryModal();
+      if (e.target === forendigiModal) closeArticlePreview();
+      if (e.target === certModal) closeCertModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeInquiryModal();
+        closeArticlePreview();
+        closeCertModal();
+      }
+    });
+
+    // 6. FAQ Accordion Toggle
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = !content.classList.contains('hidden');
+
+        // Close all other items
+        document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(ic => ic.classList.remove('rotate-45', 'text-binance-primary'));
+
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-45', 'text-binance-primary');
+        }
+      });
+    });
+
+    // 7. Initialize Market Table & Current Year on Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderMarketRows('all');
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
