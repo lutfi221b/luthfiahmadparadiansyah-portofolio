@@ -193,6 +193,255 @@
   </header>
 
   <!-- ===================================================================== -->
+  <!-- 2. HERO BAND & PERSONAL PROFILE (profil.jpeg + About Luthfi)          -->
+  <!-- ===================================================================== -->
+  <section id="overview" class="py-16 md:py-20 border-b border-binance-hairlineLight dark:border-binance-hairlineDark">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        
+        <!-- Left 7 Columns: Personal Bio, Hero Display Headline & Quick Inquiry -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark">
+            <span class="w-2 h-2 rounded-full bg-binance-tradingUp"></span>
+            <span class="font-tabular text-xs font-semibold tracking-wide text-binance-ink dark:text-white uppercase">
+              CYBERSECURITY • EXPLOIT DEV • VENTURE BUILDER
+            </span>
+          </div>
+
+          <!-- Hero Display Headline (Binance Yellow #FCD535 focal point) -->
+          <h1 class="text-[36px] sm:text-[52px] lg:text-[60px] font-bold leading-[1.08] tracking-[-1px] text-binance-ink dark:text-white">
+            LUTHFI AHMAD <span class="text-binance-primary block">PARADIANSYAH</span>
+          </h1>
+
+          <!-- Personal Introduction & Narrative -->
+          <div class="space-y-4 text-[15px] leading-[1.65] text-binance-mutedStrong dark:text-binance-bodyDark">
+            <p>
+              Halo, saya <strong class="text-binance-ink dark:text-white">Luthfi Ahmad Paradiansyah</strong>—seorang praktisi <span class="text-binance-primary font-semibold">Cybersecurity</span> dengan spesialisasi mendalam pada <strong class="text-binance-ink dark:text-white">Exploit Development</strong>, sekaligus penggerak bisnis digital yang gemar membangun sistem dari nol hingga menghasilkan nilai komersial.
+            </p>
+            <p>
+              Aktivitas saya mencakup beragam disiplin: mulai dari riset celah kerentanan tingkat teknis, mengeksekusi berbagai proyek bisnis dan klien, hingga merintis usaha mandiri. Saya pernah membangun <strong class="text-binance-ink dark:text-white">Forendigi</strong> (yang kini bertransformasi menjadi repositori artikel edukasi forensik digital), dan saat ini aktif mengembangkan <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="text-binance-primary font-semibold hover:underline">Kalanirvata (kalanirvata.my.id)</a> sebagai ekosistem otomasi AI dan solusi digital.
+            </p>
+          </div>
+
+          <!-- Hero Quick Inquiry Form (search-input-on-dark + pill CTA) -->
+          <form onsubmit="handleHeroSubmit(event)" class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-xl">
+            <input 
+              id="heroQuickInput" 
+              type="text" 
+              placeholder="Email / topik proyek bisnis atau security audit..." 
+              class="flex-1 h-12 px-4 rounded-lg bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark text-[14px] text-binance-ink dark:text-white placeholder-binance-muted bn-focus"
+            />
+            <button type="submit" class="btn-bn-primary h-12 px-7 rounded-pill shrink-0 cursor-pointer">
+              Mulai Diskusi
+            </button>
+          </form>
+
+          <!-- Key Tabular Stat Callouts (BinancePlex / JetBrains Mono) -->
+          <div class="pt-4 grid grid-cols-3 gap-4 sm:gap-6 border-t border-binance-hairlineLight dark:border-binance-hairlineDark">
+            <div>
+              <div class="font-tabular text-[24px] sm:text-[32px] font-bold text-binance-primary leading-tight">EXPLOIT</div>
+              <div class="text-xs text-binance-muted mt-1">Core Security R&amp;D</div>
+            </div>
+            <div>
+              <div class="font-tabular text-[24px] sm:text-[32px] font-bold text-binance-ink dark:text-white leading-tight">MULTI-BIZ</div>
+              <div class="text-xs text-binance-muted mt-1">Ventures &amp; Client Builds</div>
+            </div>
+            <div>
+              <div class="font-tabular text-[24px] sm:text-[32px] font-bold text-binance-tradingUp leading-tight">ACTIVE</div>
+              <div class="text-xs text-binance-muted mt-1">kalanirvata.my.id</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Profile Photo Card (profil.jpeg) + Live Ventures Market Board -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Profile Photo Card -->
+          <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-5">
+            <div class="flex flex-col sm:flex-row lg:flex-col items-center sm:items-start lg:items-stretch gap-5">
+              <div class="w-full sm:w-44 lg:w-full aspect-square sm:aspect-[4/5] lg:aspect-[4/3] rounded-lg overflow-hidden bg-binance-canvasLight dark:bg-binance-canvasDark border border-binance-hairlineLight dark:border-binance-hairlineDark relative shrink-0">
+                <img 
+                  src="profil.jpeg" 
+                  alt="Foto Profil Luthfi Ahmad Paradiansyah" 
+                  onerror="this.onerror=null; this.src='https://placehold.co/600x600/1e2329/fcd535?text=Luthfi+Ahmad+P';"
+                  class="w-full h-full object-cover object-center"
+                />
+                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-sm bg-binance-canvasDark/90 border border-binance-hairlineDark font-tabular text-[11px] font-semibold text-binance-primary">
+                  @LUTHFI.SEC
+                </div>
+              </div>
+              <div class="flex-1 w-full">
+                <div class="flex items-center justify-between gap-2">
+                  <h2 class="text-[18px] font-bold text-binance-ink dark:text-white">Luthfi Ahmad Paradiansyah</h2>
+                  <span class="font-tabular text-xs font-semibold text-binance-tradingUp">● ONLINE</span>
+                </div>
+                <p class="text-[13px] text-binance-muted mt-1">
+                  Exploit Developer, Security Researcher &amp; Founder of Kalanirvata.
+                </p>
+                <div class="mt-3 pt-3 border-t border-binance-hairlineLight dark:border-binance-hairlineDark grid grid-cols-2 gap-2 text-xs">
+                  <div>
+                    <span class="text-binance-muted block">Primary Venture</span>
+                    <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="font-tabular font-semibold text-binance-primary hover:underline">kalanirvata.my.id ↗</a>
+                  </div>
+                  <div>
+                    <span class="text-binance-muted block">Past Archive</span>
+                    <button type="button" onclick="openArticlePreview()" class="font-tabular font-semibold text-binance-ink dark:text-white hover:text-binance-primary cursor-pointer">Forendigi (Articles)</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compact Binance Markets Table Card for Ventures & Projects -->
+          <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-5">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div class="flex items-center gap-1.5 text-xs">
+                <button type="button" data-filter="all" class="market-tab active px-2.5 py-1 rounded-md bg-binance-canvasLight dark:bg-binance-surfaceElevatedDark text-binance-ink dark:text-white font-semibold cursor-pointer">All</button>
+                <button type="button" data-filter="active" class="market-tab px-2.5 py-1 rounded-md text-binance-muted hover:text-binance-ink dark:hover:text-white cursor-pointer">Business</button>
+                <button type="button" data-filter="security" class="market-tab px-2.5 py-1 rounded-md text-binance-muted hover:text-binance-ink dark:hover:text-white cursor-pointer">Security</button>
+                <button type="button" data-filter="archive" class="market-tab px-2.5 py-1 rounded-md text-binance-muted hover:text-binance-ink dark:hover:text-white cursor-pointer">Archive</button>
+              </div>
+              <span class="font-tabular text-[11px] text-binance-muted">PORTFOLIO INDEX</span>
+            </div>
+            <div id="marketRowsContainer" class="divide-y divide-binance-hairlineLight dark:divide-binance-hairlineDark"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 3. VENTURES & BUSINESS PROJECTS (Kalanirvata, Forendigi, Projects)    -->
+  <!-- ===================================================================== -->
+  <section id="ventures" class="py-16 md:py-20 border-b border-binance-hairlineLight dark:border-binance-hairlineDark">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div>
+          <span class="font-tabular text-xs font-semibold uppercase tracking-wider text-binance-primary">BUSINESS &amp; VENTURE TRACK</span>
+          <h2 class="text-[32px] sm:text-[40px] font-semibold leading-[1.15] tracking-[-0.3px] text-binance-ink dark:text-white mt-1">
+            Ventures &amp; Business Projects
+          </h2>
+        </div>
+        <p class="text-[14px] text-binance-muted max-w-md">
+          Perjalanan membangun produk bisnis mandiri, kolaborasi proyek komersial, hingga arsip usaha yang telah bertransformasi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: Kalanirvata -->
+        <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="font-tabular text-xs font-semibold px-2.5 py-1 rounded-sm bg-binance-primary text-binance-ink">ACTIVE VENTURE</span>
+              <span class="font-tabular text-xs font-semibold text-binance-tradingUp">▲ LIVE</span>
+            </div>
+            <h3 class="text-[20px] font-semibold text-binance-ink dark:text-white">Kalanirvata</h3>
+            <div class="font-tabular text-xs text-binance-primary mt-1">kalanirvata.my.id</div>
+            <p class="text-[14px] leading-relaxed text-binance-mutedStrong dark:text-binance-bodyDark mt-3">
+              Platform dan agensi bisnis aktif yang berfokus pada solusi otomasi AI, orkestrasi sistem cerdas, serta layanan analisis deduktif untuk kebutuhan operasional digital modern.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-binance-hairlineLight dark:border-binance-hairlineDark flex items-center justify-between">
+            <a href="https://kalanirvata.my.id" target="_blank" rel="noopener noreferrer" class="btn-bn-primary h-9 px-4 rounded-md inline-flex items-center justify-center text-xs">
+              Kunjungi Web ↗
+            </a>
+            <span class="font-tabular text-xs text-binance-muted">AI &amp; DIGITAL</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Business & Client Projects -->
+        <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="font-tabular text-xs font-semibold px-2.5 py-1 rounded-sm bg-binance-canvasLight dark:bg-binance-surfaceElevatedDark text-binance-ink dark:text-white border border-binance-hairlineLight dark:border-binance-hairlineDark">COMMERCIAL PROJECTS</span>
+              <span class="font-tabular text-xs font-semibold text-binance-tradingUp">▲ DELIVERED</span>
+            </div>
+            <h3 class="text-[20px] font-semibold text-binance-ink dark:text-white">Business &amp; Custom Builds</h3>
+            <div class="font-tabular text-xs text-binance-muted mt-1">B2B Contracts &amp; Venture Prototyping</div>
+            <p class="text-[14px] leading-relaxed text-binance-mutedStrong dark:text-binance-bodyDark mt-3">
+              Mengerjakan beragam proyek bisnis dari klien maupun inisiatif internal—mencakup pengembangan platform web, otomasi alur kerja, hingga integrasi infrastruktur yang aman dan terukur.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-binance-hairlineLight dark:border-binance-hairlineDark flex items-center justify-between">
+            <button type="button" onclick="openInquiryModal('Custom Project / Freelance Build')" class="text-sm font-semibold text-binance-primary hover:underline cursor-pointer">
+              Ajukan Proyek →
+            </button>
+            <span class="font-tabular text-xs text-binance-muted">FULL-CYCLE</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Forendigi (Archived Startup -> Articles) -->
+        <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="font-tabular text-xs font-semibold px-2.5 py-1 rounded-sm bg-binance-tradingDown/10 text-binance-tradingDown">ARCHIVED VENTURE</span>
+              <span class="font-tabular text-xs font-semibold text-binance-muted">ARTICLES ONLY</span>
+            </div>
+            <h3 class="text-[20px] font-semibold text-binance-ink dark:text-white">Forendigi</h3>
+            <div class="font-tabular text-xs text-binance-muted mt-1">Ex-Digital Forensics Initiative</div>
+            <p class="text-[14px] leading-relaxed text-binance-mutedStrong dark:text-binance-bodyDark mt-3">
+              Usaha rintisan yang pernah saya bangun di bidang forensik digital. Kini operasional komersialnya telah dihentikan dan bertransformasi menjadi arsip publikasi artikel edukatif seputar digital forensics.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-binance-hairlineLight dark:border-binance-hairlineDark flex items-center justify-between">
+            <button type="button" onclick="openArticlePreview()" class="text-sm font-semibold text-binance-primary hover:underline cursor-pointer">
+              Baca Arsip Kasus →
+            </button>
+            <span class="font-tabular text-xs text-binance-muted">PUBLICATION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. EXPLOIT DEVELOPMENT & CYBERSECURITY ENGINEERING                    -->
+  <!-- ===================================================================== -->
+  <section id="exploit-security" class="py-16 md:py-20 border-b border-binance-hairlineLight dark:border-binance-hairlineDark">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+        <div>
+          <span class="font-tabular text-xs font-semibold uppercase tracking-wider text-binance-primary">OFFENSIVE SECURITY &amp; R&amp;D</span>
+          <h2 class="text-[32px] sm:text-[40px] font-semibold leading-[1.15] tracking-[-0.3px] text-binance-ink dark:text-white mt-1">
+            Exploit Development &amp; Security Stack
+          </h2>
+        </div>
+        <p class="text-[14px] text-binance-muted max-w-md">
+          Eksplorasi mendalam terhadap mekanisme kerentanan perangkat lunak, pembuatan exploit PoC, dan otomasi reconnaissance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-6">
+          <div class="font-tabular text-xs font-semibold text-binance-primary mb-2">01 / VULNERABILITY RESEARCH</div>
+          <h3 class="text-[18px] font-semibold text-binance-ink dark:text-white mb-2">Exploit Development &amp; PoC</h3>
+          <p class="text-[14px] text-binance-mutedStrong dark:text-binance-bodyDark leading-relaxed">
+            Menganalisis akar penyebab celah keamanan pada aplikasi web, API, maupun sistem biner untuk menyusun Proof-of-Concept (PoC) yang terukur serta strategi mitigasi yang presisi.
+          </p>
+        </div>
+
+        <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-6">
+          <div class="font-tabular text-xs font-semibold text-binance-primary mb-2">02 / RUST SECURITY TOOLING</div>
+          <h3 class="text-[18px] font-semibold text-binance-ink dark:text-white mb-2">Suberust Recon Engine</h3>
+          <p class="text-[14px] text-binance-mutedStrong dark:text-binance-bodyDark leading-relaxed">
+            Pengembangan perkakas enumerasi subdomain dan pemetaan permukaan serangan (attack surface) berkecepatan tinggi menggunakan bahasa pemrograman Rust.
+          </p>
+        </div>
+
+        <div class="bg-binance-surfaceSoftLight dark:bg-binance-surfaceDark border border-binance-hairlineLight dark:border-binance-hairlineDark rounded-xl p-6">
+          <div class="font-tabular text-xs font-semibold text-binance-primary mb-2">03 / AI-ASSISTED VAPT</div>
+          <h3 class="text-[18px] font-semibold text-binance-ink dark:text-white mb-2">SiberHub MCP Architecture</h3>
+          <p class="text-[14px] text-binance-mutedStrong dark:text-binance-bodyDark leading-relaxed">
+            Integrasi Model Context Protocol (MCP) untuk menghubungkan alur kerja pengujian penetrasi dan manajemen kerentanan dengan agen AI secara otomatis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
   <!-- 5. CERTIFICATIONS & CREDENTIALS (cert1.png, cert2.png, cert3.png)     -->
   <!-- ===================================================================== -->
   <section id="certificates" class="py-16 md:py-20 border-b border-binance-hairlineLight dark:border-binance-hairlineDark">
@@ -519,13 +768,6 @@
       
       <div class="grid grid-cols-2 md:grid-cols-6 gap-8 pb-12 border-b border-binance-hairlineLight">
         
-        <!-- Brand Column (2 cols on desktop) -->
-        <div class="col-span-2">
-          <div class="flex items-center gap-2 mb-4">
-            <svg class="w-6 h-6 text-binance-primary" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 3L21.5 8.5L18.3 11.7L16 9.4L13.7 11.7L10.5 8.5L16 3Z" fill="currentColor"/>
-              <path d="M29 16L23.5 21.5L20.3 18.3L22.6 16L20.3 13.7L23.5 10.5L29 16Z" fill="currentColor"/>
-              <path d="M16 29L10.5 23.5L13.7 20.3L16 22.6L18.3 20.3L21.5 23.5L16 29Z" fill="currentColor"/>
         <!-- Brand Column (2 cols on desktop, No Logo) -->
         <div class="col-span-2">
           <div class="mb-4">
